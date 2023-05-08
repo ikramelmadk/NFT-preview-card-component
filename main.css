@@ -1,0 +1,280 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1.2;
+}
+ol { 
+  padding-left: 1.4em;
+  list-style: decimal;
+}
+ul {
+  padding-left: 1.4em;
+  list-style: square;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* end reset browser styles */
+
+html{
+  /*font-size: calc(15px + 0.390625vw);*/
+  font-size: 62.5%;
+}
+
+:root{
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-BG: hsl(217, 54%, 11%);
+  --card-BG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body{
+  font-size: 1.2rem;
+  background-color: var(--main-BG);
+  font-family: 'Outfit', sans-serif;
+}
+
+main{
+  width: 30em;
+  max-width: calc(100% - 1.25em);
+  margin: 2em auto 0 auto;
+  padding: 1.5em;
+  background-color: var(--card-BG);
+  border-radius: 1em;
+}
+
+@media (min-width:30em) { /* smartphones, Android phones, landscape iPhone */ 
+  main{
+    width: 40em;
+    padding: 2em;
+  }
+}
+
+section.ethereum_picture_container{
+  max-width: 28em;
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+@media (min-width:30em) { /* smartphones, Android phones, landscape iPhone */ 
+  section.ethereum_picture_container{
+    max-width: 40em;
+  }
+}
+
+div.ethereum_background{
+  position: absolute;
+  opacity: 0;
+  background-color: var(--cyan);
+  border-radius: 1em;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+section.ethereum_picture_container:hover div.ethereum_background{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+img.ethereum_picture{
+  max-width: 100%;
+  border-radius: 1em;
+}
+
+img.icon_view{
+  position: absolute;
+  visibility: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width:30em) { /* smartphones, Android phones, landscape iPhone */ 
+  img.icon_view{
+    width: 80px;
+  }
+}
+
+section.ethereum_picture_container:hover img.icon_view{
+  visibility: visible;
+}
+
+section.ethereum_detail{
+  max-width: 30em;
+}
+
+@media (min-width:30em) { /* smartphones, Android phones, landscape iPhone */ 
+  section.ethereum_detail{
+    max-width: 40em;
+  }
+}
+
+h1{
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: .5em;
+}
+
+@media (min-width:30em) { /* smartphones, Android phones, landscape iPhone */ 
+  h1{
+    font-size: 3.5rem;
+  }
+}
+
+h1:hover{
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+p.ethereum_main_paragraph{
+  color: var(--soft-blue);
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+@media (min-width:30em) { /* smartphones, Android phones, landscape iPhone */ 
+  p.ethereum_main_paragraph{
+    font-size: 2rem;
+  }
+}
+
+div.ethereum_timing{
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 1.2em;
+  border-bottom: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--line);
+  margin-bottom: 1em;
+}
+
+div.ethereum_detail_wrapper{
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+div.ethereum_detail_wrapper img{
+  margin-right: .5em;
+  width: 13px;
+  height: 20px;
+}
+
+@media (min-width:30em) { /* smartphones, Android phones, landscape iPhone */ 
+  div.ethereum_detail_wrapper img{
+    width: 15px;
+    height: 22px;
+    margin-right: 1em;
+  }
+}
+
+div.ethereum_detail_wrapper p{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cyan);
+}
+
+@media (min-width:30em) { /* smartphones, Android phones, landscape iPhone */ 
+  div.ethereum_detail_wrapper p{
+    font-size: 1.8rem;
+  }
+}
+
+div.ethereum_timer{
+  display: flex;
+  align-items: center;
+}
+
+div.ethereum_timer img{
+  margin-right: .5em;
+  width: 18px;
+  height: 18px;
+}
+
+@media (min-width:30em) { /* smartphones, Android phones, landscape iPhone */ 
+  div.ethereum_timer img{
+    width: 23px;
+    height: 23px;
+    margin-right: 1em;
+  }
+}
+
+div.ethereum_timer p{
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--soft-blue);
+}
+
+@media (min-width:30em) { /* smartphones, Android phones, landscape iPhone */ 
+  div.ethereum_timer p{
+    font-size: 1.9rem;
+  }
+}
+
+div.page_avatar_wrapper{
+  display: flex;
+  align-items: center;
+}
+
+div.page_avatar_wrapper img{
+  width: 35px;
+  height: 35px;
+  margin-right: 1em;
+  border:2px solid white;
+  border-radius: 50%;
+}
+
+@media (min-width:30em) { /* smartphones, Android phones, landscape iPhone */ 
+  div.page_avatar_wrapper img{
+    width: 40px;
+    height: 40px;
+    margin-right: 1.8em;
+  }
+}
+
+div.page_avatar_wrapper p{
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--soft-blue);
+}
+
+@media (min-width:30em) { /* smartphones, Android phones, landscape iPhone */ 
+  div.page_avatar_wrapper p{
+    font-size: 1.9rem;
+  }
+}
+
+div.page_avatar_wrapper span{
+  color: var(--white);
+}
+
+div.page_avatar_wrapper span:hover{
+  color: var(--cyan);
+  cursor: pointer;
+}
